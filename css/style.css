@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: antiquewhite;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'that';
+    src: url(../fonts/Roboto-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'one';
+    src: url(../fonts/CroissantOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'two';
+    src: url(../fonts/Kenia-Regular.ttf);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 30px;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: azure;
+    font-weight: bold;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.active .active-nav {
+    height: 3px;
+    background: #385ae0;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+}
+
+
+:root {
+    --body-bg: hsl(0, 0%, 25%)
+}
+
+
+
+body {
+
+    background: var(--body-bg);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+    background-image: url(../img/sd.jpg);
+    background-repeat: no-repeat;
+}
+
+#home {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* Center content vertically */
+    justify-content: center;
+    /* Adjusted to be closer to the top */
+    background-image: url(../img/sd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+a1,
+a2,
+h2 {
+    margin: 9px;
+    /* Reset margin to remove extra spacing */
+    text-align: center;
+    /* Center text */
+    letter-spacing: 8px;
+}
+
+h1 {
+    font-size: 85px;
+    font-family: 'one', sans-serif;
+    opacity: 0;
+    animation: slideIn 1.3s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+a2 {
+    font-size: 30px;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards 0.5s;
+    animation-delay: 2s;
+    margin: 10px;
+    column-count: 2;
+    /* Added to split content into two columns */
+    column-gap: 40px;
+    /* Adjust the gap between columns */
+}
+
+a1 {
+    font-size: 30px;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards 0.5s;
+    animation-delay: 2s;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'one', sans-serif;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards 1s;
+    animation-delay: 2s;
+}
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50vh);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content-container>.my {
+    height: 20vh;
+    width: 50%;
+    position: relative;
+    align-items: center;
+    top: 15%;
+}
+
+
+
+/* about page  */
+#about {
+    width: 100%;
+    height: 100vh;
+    float: left;
+    align-items: center;
+    background-color: coral;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 7px solid;
+    border-image-slice: 1;
+}
+
+.desc {
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    top: 50%;
+}
+
+a3 {
+    color: antiquewhite;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 80px;
+    background: linear-gradient(rgb(111, 111, 231), rgb(136, 222, 136));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: cursive;
+}
+
+h3:hover {
+    opacity: 0;
+}
+
+.content-container {
+    top: 10%;
+    position: absolute;
+    transition: transform 0.3s ease-out;
+
+}
+
+.desc {
+    display: flex;
+}
+
+.desc>.photo {
+    height: 30rem;
+    width: 30rem;
+    top: 0%;
+    right: 0%;
+    gap: 35px;
+    border-radius: 50%;
+    margin-left: 80px;
+    object-fit: cover;
+}
+
+/* projects  */
+#projects {
+    width: 100%;
+    height: 100vh;
+    background: rgb(2, 0, 36);
+    /* background-color: #fff; */
+    background-color: peru;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+}
+
+.card {
+    margin-top: 38px;
+    height: 15rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(61, 108, 108);
+    grid-column: span 3;
+    font-size: 1.2rem;
+    box-shadow: 0.7rem 0.7rem 0rem black;
+    border: 4px solid black;
+    gap: 2rem;
+}
+
+.card p {
+    line-height: 2rem;
+}
+
+.card.active p {
+    display: block;
+}
+
+.card.active {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    order: 0;
+    height: auto;
+    /* width: auto; */
+}
+
+.card.is-inactive {
+    grid-column: span 2;
+}
+
+
+h6 {
+    color: #000;
+    font-size: 9em;
+    display: flex;
+    padding: 0%;
+    margin: 0%;
+    z-index: 10000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h6 span {
+    animation: glow 2s linear 1, fadeOut 1s linear 2s forwards;
+    /* Add fadeOut animation after 4 seconds */
+}
+
+h6 span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+h6 span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+h6 span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+h6 span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+h6 span:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+h6 span:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+@keyframes glow {
+
+    0%,
+    100%,
+    25%,
+    75% {
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+            0 0 20px #00b3ff,
+            0 0 40px #00b3ff,
+            0 0 80px #00b3ff,
+            0 0 120px #00b3ff,
+            0 0 200px #00b3ff,
+            0 0 300px #00b3ff,
+            0 0 400px #00b3ff;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* contact page  */
+#contact {
+    width: 99%;
+    height: 100vh;
+    float: left;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: coral;
+
+    border: 7px solid;
+    border-color: #000;
+    border-image-slice: 1;
+}
+
+.wrapper1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container1 {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card1 {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card1>.row1 {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card1>.row1>.icon1 {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card1>.row1>.description1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description1 p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description1 h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked+label {
+    width: 600px;
+}
+
+input:checked+label .description1 {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card1[for="c1"] {
+    background-image: url('../img/img1.jpg');
+}
+
+.card1[for="c2"] {
+    background-image: url('../img/img2.webp');
+}
+
+.card1[for="c3"] {
+    background-image: url('../img/img3.png');
+}
+
+.card1[for="c4"] {
+    background-image: url('../img/cc.png');
+}
+
+h7 {
+    color: #385ae0;
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+p7 {
+    color: darkgrey;
+    text-decoration-style: wavy;
+    font-weight: 900;
+}

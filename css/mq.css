@@ -1,0 +1,199 @@
+@media only screen and (max-width: 1000px) {
+    nav {
+        background-color: #122131;
+        width: 100%;
+        margin: 0px;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+    nav ul {
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin-bottom: 1rem;
+    }
+
+    .active .active-nav {
+        width: 50%;
+        left: 25%;
+    }
+
+    body {
+        background-size: cover;
+    }
+
+    #home {
+        background-size: cover;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    a1,
+    a2 {
+        font-size: 20px;
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .content-container>.my {
+        width: 80%;
+    }
+
+    #about {
+        height: auto;
+    }
+
+    .desc {
+        margin: 15px;
+    }
+
+    a3 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 50px;
+    }
+
+    .content-container {
+        top: 5%;
+    }
+
+    .desc {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desc>.photo {
+        height: 15rem;
+        width: 15rem;
+        margin-left: 0;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    #projects {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+    }
+
+    .card {
+        grid-column: span 1;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    h6 {
+        font-size: 4em;
+    }
+
+    @keyframes glow {
+
+        0%,
+        100%,
+        25%,
+        75% {
+            color: #fff;
+            filter: blur(1px);
+            text-shadow: 0 0 5px #00b3ff, 0 0 10px #00b3ff, 0 0 20px #00b3ff;
+        }
+    }
+
+    #contact {
+        height: auto;
+    }
+
+    .wrapper1 {
+        margin-top: 10px;
+    }
+
+    .container1 {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card1>.row1 {
+        justify-content: center;
+    }
+
+    .card1>.row1>.description1 {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    input:checked+label {
+        width: 100%;
+    }
+
+    input:checked+label .description1 {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    h7 {
+        font-size: 20px;
+    }
+
+    p7 {
+        font-size: 16px;
+    }
+
+    body {
+        border-width: 3px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header>.CS,
+    header>.game {
+        width: 40px;
+        height: 40px;
+    }
+
+    header>.CS img,
+    header>.game img {
+        border-radius: 0;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+    }
+
+    .right-photo,
+    .right2-photo,
+    .right3-photo,
+    .rightw-photo,
+    .down-photo {
+        position: absolute;
+        box-sizing: border-box;
+    }
+}
